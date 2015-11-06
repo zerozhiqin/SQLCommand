@@ -62,6 +62,10 @@ public class SQL {
         return new Delete<>(database, datas);
     }
 
+    public <T> Delete.DeleteSingle<T> delete(T datas) {
+        return new Delete.DeleteSingle<>(database, datas);
+    }
+
     public <T> Delete.DeleteWithArgument<T> delete(String tableName) {
         return new Delete.DeleteWithArgument<>(database, tableName);
     }
